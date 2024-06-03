@@ -1,0 +1,118 @@
+  /* a tag dentro do html faz com que o link do site leve ao link de forma suave */
+  html{
+    scroll-behavior: smooth;
+   }
+
+   body {
+        background-color: #f2e7dc;
+        color: #0d0d0d;
+        text-align: justify;
+        
+        /* alinhamento e tamanho */
+        /* 1ren = 16px tela grande = font-size: 16px, tela media = font size 15 px, tela pequena = font size 14 px */
+        margin: auto;
+        width: 85%; 
+}
+/* seção dos livros */
+section {
+    /* espaçamento dentro da seção */
+    padding: 64px 256px 64px 256px ;
+}
+
+
+
+a{
+    color: #f2e7dc;
+}
+/* tabela */
+table{
+    /* largura*/
+   width: 100%;
+}
+td{
+    background-color: #A9D9D0;
+}
+td,
+th {
+    /* borda no formanto completo */
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius:4px;
+    /* alinhamento do texto*/
+    text-align: center;
+}
+tr {
+    background-color: #038C7F;
+}
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+h1,
+h2,
+h3{
+    text-align: center;
+}
+h3{ 
+    color: #000;
+}
+
+a:link{
+    color: #f2e7dc; /* link normal */
+}
+a:visited{
+    color: #95bfb8; /* link visitado */
+}
+a:hover{
+    color: #025454; /* mouse sobre o link */
+}
+a:active{
+    color: #0d0d0d; /* link ativo */
+}
+/* imagem */
+img { 
+    width: 300px;
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+}
+/* classes e IDs*/
+.bookTitle{
+    background-color: #a9d9d0;
+color: #027373;
+text-align: center;
+}
+#sectionHP, 
+#sectionJJ, 
+#sectionDB {
+    background-color: #A9D9D0;
+}
+#header{
+background-color: #038C7F;
+color: #f2e7dc;
+padding: 20px;
+margin-bottom: 0px;
+}
+#yourLibrary{
+    text-align: center;
+    text-indent: 0px;
+}
+#sumary{
+background-color: #038C7F;
+color: #f2e7dc;
+padding: 20px;
+margin-bottom: 50px;
+border-radius: 0 0 50px 50px;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+/* roda pé */
+footer{
+    background-color: #038C7F;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}

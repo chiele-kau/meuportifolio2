@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séries. Net</title>
+
+    <!--! arquivo CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+  <body>
+    <script src="script.js"></script>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#topo">Séries. Net</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li>
+                    <a class="nav-link active" aria-current="page" href="#tabfilmes">Séries Disponiveis</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropGeneros" role="button" data-bs-toggle="dropdown" href="#drop" aria-expanded="false"> 
+                        Séries por Categoria
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#gcomed"> Comédia</a></li>
+                        <li><a class="dropdown-item" href="#ganime"> Animação</a></li> 
+                        <li><a class="dropdown-item" href="#gacao"> Ação</a></li>
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cadfilmes">Cadastrar Séries</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="display-1 text-center mb-5 mb-3" id="topo">Séries. Net</h1>
+
+    <div class="container">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Criador(es)</th>
+                    <th scope="col">Lançamento</th>
+                    <th scope="col">Gêneros</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th class="text-center table-primary" colspan="10" id="#gcomed">Comédia</th>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td scope="col" >Ted Lasso</td>
+                    <td scope="col"> Jason Sudeikis, Bill Lawrence, Joe Kelly</td>
+                    <td scope="col"> 14 de agosto de 2020 </td>
+                    <td scope="col"> Comédia</td>
+                </tr>
+                
+                <tr>
+                    <th class="text-center table-primary" colspan="10" id="#ganime">Animação</th>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td scope="col">Rick and Morty</td>
+                    <td scope="col"> Justin Roiland e Dan Harmon</td>
+                    <td scope="col"> 2 de dezembro de 2013</td>
+                    <td scope="col">Animação</td>
+                </tr>
+                
+                <tr>
+                    <th class="text-center table-primary" colspan="10" id="#gacao">Ação</th>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td scope="col"> The Witcher </td>
+                    <td scope="col">Lauren Schmidt Hissrich</td>
+                    <td scope="col"> 20 de dezembro de 2019</td>
+                    <td scope="col">Ação</td>
+                </tr>
+                
+                <tr id="insertRow"></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mb-5 mt-5">
+        <hr class="border-primary border-3 opacity-75" />
+    </div>
+
+    <div class="container mb-5" id="cadfilmes">
+        <h2 class="text-center mb-4">Cadastro de Séries</h2>
+
+        <form name="register" onsubmit="event.preventDefault()">
+            <!--! cadastro do codigo e do titulo-->
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="codFilm" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="codFilm" name="cod"/>
+                </div>
+
+                <div class="mb-3 col">
+                    <label for="titlefilm" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="titlefilm" name="title" />
+                </div>
+            </div>
+
+           <!--? Cadastro de Diretor e Lançamento-->
+           <div class="row">
+            <div class="mb-3 col">
+                <label for="directoFilm" class="form-label">Criador</label>
+                <input type="text" class="form-control" id="directorFilm" name="director"/>
+            </div>
+            
+            <div class="mb-3 col">
+                <label for="yearfilm" class="form-label">Lançamento</label>
+                <input type="text" class="form-control" id="yearfilm"  placeholder="DD/MM/AA" name="date" />
+            </div>
+            </div>
+           </div>
+
+           <!--? cadastro de genero-->
+           <p>Selecione o genêro</p>
+           <div class="row mt-3">
+            <div class="col form-check ms-5">
+                <input type="radio" id="radioGAcao" name="radio" class="form-check-input" value="comed"/>
+                <label for="radioGAcao" class="form-label">Cómedia</label>
+            </div>
+            <div  class="col form-check">
+                <input type="radio" id="radioGAnim" name="radio" class="form-check-input" value="animacao" />
+                <label for="radioGAnim" class="form-label"> Animação</label>
+            </div>
+            <div  class="col form-check">
+                <input type="radio" id="radioGromance" name="radio" class="form-check-input" value="acao" />
+                <label for="radioGromanse" class="form-label"> Ação</label>
+            </div>
+            
+           </div>
+           <!--? botão enviar-->
+           <div class="col-auto d-flex justify-content-center">
+            <button type="submit" onclick="validationForm(); insert()" class="btn btn-primary mt-3">Cadastrar</button>
+           </div>
+        </form>
+    </div>
+  </body>
+</html>

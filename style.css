@@ -1,0 +1,102 @@
+#sobre,
+ #servicos,
+  #portifolio,
+   #contato {
+    padding: 10rem 0;
+}
+
+.bgimage {
+    height: 100vh;
+    position: relative;
+
+    background: url("images/heroImagem.jpg");
+    background-size: cover;
+}
+.heroTitle {
+    font-size: 4.5rem;
+}
+.heroDesc {
+    font-size: 2rem;
+}
+.heroText {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+/* imagem sobre mim*/
+.aboutImage {
+    width: 100%;
+}
+
+
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+    padding: 0 2rem;
+}
+.servicesIcon {
+    height: 36px;
+    text-align: center;
+    width: 100%;
+}
+.cardTitle {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+    border: 1px solid;
+    border-color: #008000;
+}
+
+/*estillização de cabeçario*/
+.navbar {
+    background-color: #006342;
+}
+
+.navbar a {
+    color: white;
+    padding: 0.5rem;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 4px;
+}
+/* aula 03: icones seção contatos*/
+.contactIcon {
+    font-size: 2.5rem;
+    color: #006342;
+}
+
+/*footer*/
+footer {
+    background-color: #003020;
+} /* lembrar de add o :hover V*/
+.footerIcon {
+    color: #c4c4c4; 
+}
+.footerDev {
+    background-color: #006342;
+}
+
+/* Efeito GLASSMORFISMO*/
+.glass {
+    position: absolute;
+    height: 40%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+background: rgba(173, 255, 134, 0.14);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.1px);
+-webkit-backdrop-filter: blur(2.1px);
+}
